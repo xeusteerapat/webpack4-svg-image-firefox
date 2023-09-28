@@ -20,10 +20,17 @@ export const SVGToBase64 = (rawSVG) => {
       canvas.width = img.width * devicePixelRatio;
       canvas.height = img.height * devicePixelRatio;
 
+      console.log({
+        imgW: img.width,
+        imgH: img.height,
+      });
+
       ctx.drawImage(img, 0, 0);
       resolve(canvas.toDataURL());
       canvas = null;
     };
+
+    document.getElementById('app').appendChild(canvas);
 
     img.onerror = () => reject('error');
   });

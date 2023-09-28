@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { generateProductGraph } from '../libs/genProductGraph';
 
 const App = () => {
-  const [svgUrl, setSvgUrl] = useState('');
+  const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
     const getRawSvg = async () => {
